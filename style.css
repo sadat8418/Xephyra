@@ -659,7 +659,7 @@ hero-content{
     font-size: 2rem;
   }
 
-  h2
+  h2,
   .tooltip .icon {
     font-size: 1.5rem;
   }
@@ -668,14 +668,14 @@ hero-content{
   }
  .modal-container{
         position:fixed;
-        top: 50svh;
-        left:50svw;
+        top: 50vh;
+        left:50vw;
         /* transform: translate(-50%,-50%); */
-        width: 100svw;
-        height:100svh;
-        z-index:100;
-        /* display: flex;
-        justify-content: center; */
+        width: 100vw;
+        height:100vh;
+        z-index:10;
+        display: flex;
+        justify-content: center;
 
     }
 
