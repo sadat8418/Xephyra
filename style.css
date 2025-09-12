@@ -496,14 +496,23 @@ hero-content{
         overflow: hidden;
     }
 
-    .intro4, .outro4{
+    .intro4{
         display:flex;
+        justify-content: center;
+        align-items:center;
+        background-color: #e0dfdf;
+        color: #0d0d0d;
+        padding: 2rem;
+        
+    }
+    .outro4{
+        display:flex; 
         justify-content: center;
         align-items:center;
         background-color: #0d0d0d;
         color: #e0dfdf;
+         margin-top: -1px;
         padding: 2rem;
-        
     }
     .outro4 img{
         height: 4rem;
