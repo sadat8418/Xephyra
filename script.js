@@ -6,6 +6,28 @@
   //   import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 
 document.addEventListener("DOMContentLoaded",()=>{
+window.addEventListener("load", function() {
+  const preloader = document.getElementById("preloader");
+  const content = document.getElementById("content");
+  const progress = document.querySelector(".progress");
+
+  let width = 0;
+  let loading = setInterval(() => {
+    if (width >= 100) {
+      clearInterval(loading);
+      setTimeout(() => {
+        preloader.style.opacity = "0";
+        setTimeout(() => {
+          preloader.style.display = "none";
+          content.style.display = "block";
+        }, 500);
+      }, 300);
+    } else {
+      width += 2; // speed of loading
+      progress.style.width = width + "%";
+    }
+  }, 50); // interval speed
+});
 
 const lenis = new Lenis();
 gsap.registerPlugin(ScrollTrigger, SplitText);

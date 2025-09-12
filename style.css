@@ -5,17 +5,95 @@
      /* outline: 1px solid red;  */
 }
 body{
-    /* background-color: black; */
-    font-family: "PP Neue Montreal", sans-serif;
+    
+    /* font-family: "PP Neue Montreal", sans-serif; */
     /* font-family: "DM Mono", sans-serif; part3 */
+    /* font-family: Consolas, "Courier New", monospace; */
+    /* font-family: 'Orbitron', sans-serif; */
+  margin: 0;
+  padding: 0;
+  background-color: #fff; 
+  font-family: inherit;  
+  color: inherit;   
+}
+
+
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background: #8FBC8B; */
+  background:#e0dfdf;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  color: white;
+}
+
+
+#loading-text {
+     font-family: 'Orbitron', sans-serif;
+    font-size: 38px;
+  color: #345a80;
+  letter-spacing: 4px;
+
+  
+  text-shadow: 
+    0 2px 4px rgba(0,0,0,0.2),
+    0 4px 8px rgba(0,0,0,0.1);
+
+  background: linear-gradient(90deg, #2c3e50, #34495e);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* #fff(white) */
+.progress-bar {
+  width: 70vh;
+  height: 2svh;
+  background: #333;
+  border: 1px solid #090909;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.progress {
+  height: 100%;
+  width: 0;
+background: linear-gradient(90deg, #bdc3c7, #2c3e50);
+  border-radius: 10px;
+  transition: width 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); 
+}
+
+@media (max-width: 1000px){
+    #loading-text {
+        font-size: 1.5rem;
+    }
+    .progress-bar {
+  width: 70%;
+  
+    }
+}
+.intro {
+    background-color: #141414;
     
 }
 .intro h1
 {
     color: white;
-    font-size: 5vw;
+    font-size: 4vw;
     font-weight: 500;
     user-select: none;
+    font-family: "Host Grotesk", sans-serif ;
+
 }
 
 p{
@@ -24,15 +102,6 @@ p{
     font-family: "Akkurat Mono", monospace;
     font-weight: 600;
     user-select: none;
-}
-
-/* .outro p{
-    flex:1;
-    color: white;
-} */
-.intro {
-    background-color: #141414;
-    
 }
 
 section{
@@ -60,22 +129,15 @@ section{
 }
 
 /* part2 */
-/* @import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap"); */
 
 img{
     width: 100%;
     height:100%;
     object-fit: cover;
     will-change: transform;
-    /* overflow: hidden   ; */
 }
 
-/* h1{
-    font-size: 4rem;
-    line-height: 1.1;
-    
 
-} */
 .banner{
     position: relative;
     width: 100vw;
@@ -86,12 +148,19 @@ img{
     font-family: "Instrument serif", sans-serif;
     font-size: 3rem;
 } 
-.hero, 
+.hero
+{
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: #141414;
+}
 .outro2{
 display: flex;
 justify-content: center;
 align-items: center;
-    background-color: #141414;
+background-color: #141414;
+margin-top: -1px;
 }
 
 .hero h1, .outro2 h1{
@@ -165,54 +234,6 @@ align-items: center;
     position:relative;
     will-change: transform;
 }
-/* .banner-intro-text:nth-child(1){
-    display: flex;
-    justify-content: flex-end;
-} */
-/* .banner-img-container .img-mask:nth-child(1) {
-  transform: translateY(0px) scale(1.2);
-  z-index: 1;
-}
-
-.banner-img-container .img-mask:nth-child(2) {
-  transform: translateY(0px) scale(.99);
-  z-index: 2;
-}
-
-.banner-img-container .img-mask:nth-child(3) {
-  transform: translateY(0px) scale(0.98);
-  z-index: 3;
-}
-.banner-img-container .img-mask:nth-child(4) {
-  transform: translateY(0px) scale(0.97);
-  z-index: 4;
-}
-
-.banner-img-container .img-mask:nth-child(5) {
-  transform: translateY(0px) scale(0.96);
-  z-index: 5;
-}
-.banner-img-container .img-mask:nth-child(6) {
-  transform: translateY(0px) scale(0.95);
-  z-index: 6;
-}
-.banner-img-container .img-mask:nth-child(7) {
-  transform: translateY(0px) scale(0.94);
-  z-index: 7;
-}
-
-.banner-img-container .img-mask:nth-child(8) {
-  transform: translateY(0px) scale(0.93);
-  z-index: 8;
-}
-.banner-img-container .img-mask:nth-child(9) {
-  transform: translateY(0px) scale(0.92);
-  z-index: 9;
-} */
-/* .banner-img-container .img-mask:nth-child(3) {
-  transform: translateY(10px) scale(0.7);
-  z-index: 1;
-} */
 
 
 @media (max-width: 1000px){
@@ -387,9 +408,6 @@ hero-content{
 
 .client-logos .client-logo{
     flex:1;
-    /* filter: grayscale(100%);
-    opacity: 0.5;
-    transition: all 0.3s ease-out; */
 }
 .client-logos .client-logo img{
     object-fit: contain;
@@ -420,7 +438,7 @@ hero-content{
     }
     nav .nav-links,nav .nav-buttons{
         display: none;
-        /* width: calc(100% -1rem); */
+        /* mobile e dekha jabe na , edit in production  */
     }
      .client-logos,  .hero-img-container{
         width: calc(100% -4rem);
@@ -494,6 +512,8 @@ hero-content{
         background-color: #e0dfdf;
         color: #0d0d0d;
         overflow: hidden;
+            font-family: "PP Neue Montreal", sans-serif;
+
     }
 
     .intro4{
