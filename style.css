@@ -668,14 +668,14 @@ hero-content{
   }
  .modal-container{
         position:fixed;
-        top: 50%;
-        left:50%;
-        transform: translate(-50%,-50%);
+        top: 50svh;
+        left:50svw;
+        /* transform: translate(-50%,-50%); */
         width: 100svw;
         height:100svh;
         z-index:100;
-        display: flex;
-        justify-content: center;
+        /* display: flex;
+        justify-content: center; */
 
     }
 
