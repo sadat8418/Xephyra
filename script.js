@@ -627,6 +627,12 @@ renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 renderer.outputEncoding = THREE.LinearEncoding;
 renderer.toneMapping = THREE.NoToneMapping;
 renderer.toneMappingExposure = 1.0;
+
+// const container2 = document.querySelector(".modal-container");
+
+// // Set canvas size based on actual container size
+// renderer.setSize(container2.clientWidth, container2.clientHeight);
+// container2.appendChild(renderer.domElement);
 document.querySelector(".modal-container").appendChild(renderer.domElement);
 
 scene.add(new THREE.AmbientLight(0xffffff, 0.7));
@@ -651,11 +657,15 @@ function setupModel() {
   const center = box.getCenter(new THREE.Vector3());
 
   model.position.set(
-    isMobile ? center.x + modelSize.x * 1 : -center.x - modelSize.x * 0.4,
+    isMobile ? center.x + modelSize.x * 0.285 : -center.x - modelSize.x * 0.4,
     -center.y + modelSize.y * 0.085,
     -center.z
   );
-
+// model.position.set(
+//   -center.x + modelSize.x * 0.5,
+//   -center.y + modelSize.y * 0.1,
+//   -center.z
+// );
   model.rotation.z = isMobile ? 0 : THREE.MathUtils.degToRad(-25);
   model.rotation.y = THREE.MathUtils.degToRad(45); 
   const cameraDistance = isMobile ? 2 : 1.25;
