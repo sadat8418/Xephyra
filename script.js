@@ -653,7 +653,7 @@ function setupModel() {
   const center = box.getCenter(new THREE.Vector3());
 
   model.position.set(
-    isMobile ? center.x + modelSize.x * 0.3 : -center.x - modelSize.x * 0.4,
+    isMobile ?  modelSize.x * 0.82 : -center.x - modelSize.x * 0.4,
     -center.y + modelSize.y * 0.085,
     -center.z
   );
