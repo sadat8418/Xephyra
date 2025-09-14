@@ -2,27 +2,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-     /* outline: 1px solid red;  */
 }
 body{
-    
     font-family: "PP Neue Montreal", sans-serif;
-    /* font-family: "DM Mono", sans-serif; part3 */
-    /* font-family: Consolas, "Courier New", monospace; */
-    /* font-family: 'Orbitron', sans-serif; */
-
 }
-
-
-
 #preloader {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  /* background: #8FBC8B; */
-  /* background:#e0dfdf; */
   background: #818589;
   display: flex;
   flex-direction: column;
@@ -125,7 +114,7 @@ section{
     will-change: transform;
 }
 
-/* part2 */
+
 
 img{
     width: 100%;
@@ -184,18 +173,14 @@ margin-top: -1px;
     height: 100%;
     will-change: transform;
 }
-
-
 .banner-img-container .img-mask {
     position: absolute; 
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
- 
-
-    -webkit-mask-image: url("./assets/img36-mask.png");
-    mask-image: url("./assets/img36-mask.png");
+    -webkit-mask-image: url("../assets/img36-mask.png");
+    mask-image: url("../assets/img36-mask.png");
 
     -webkit-mask-size: cover;
     mask-size: cover;
@@ -204,8 +189,6 @@ margin-top: -1px;
     mask-position: center;
 
 }
-
-
 .banner-header{
     position: absolute;
     top:50%;
@@ -217,7 +200,6 @@ margin-top: -1px;
     /* user-select: none; */
     z-index:2;
 }
-
 .banner-intro-text-container{
     position: absolute;
     top:50%;
@@ -244,7 +226,7 @@ margin-top: -1px;
     font-size: 4rem;
    }
 }
-/* part3 */
+
 .logo img, .client-logo img,.hero-img img{
     width: 100%;
     height: 100%;
@@ -303,9 +285,6 @@ nav{
     will-change: opacity;
     z-index: 2;
 }
-
-/* dic inside nav */
-
 nav > div{
     flex: 1;
 }
@@ -339,8 +318,6 @@ nav .nav-buttons{
     justify-content: flex-end;
    
 }
-
-/* section */
 section {
     position: relative;
     width: 100vw;
@@ -435,7 +412,6 @@ hero-content{
     }
     nav .nav-links,nav .nav-buttons{
         display: none;
-        /* mobile e dekha jabe na , edit in production  */
     }
      .client-logos,  .hero-img-container{
         width: calc(100% -4rem);
