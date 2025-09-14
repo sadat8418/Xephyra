@@ -1,9 +1,3 @@
-// import Lenis from 'lenis'
-// import gsap from "gsap";
-// import { ScrollTrigger } from "gsap/all";
-// import { SplitText } from "gsap/all";
-  // import * as THREE from 'three';
-  //   import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 
 document.addEventListener("DOMContentLoaded",()=>{
 window.addEventListener("load", function() {
@@ -21,22 +15,14 @@ window.addEventListener("load", function() {
         }, 500);
       }, 300);
     } else {
-      width += 2; // speed of loading
+      width += 2; 
       progress.style.width = width + "%";
     }
-  }, 50); // interval speed
+  }, 50);
 });
 
 const lenis = new Lenis();
 gsap.registerPlugin(ScrollTrigger, SplitText);
-//   duration: 1.2,
-//   easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-//   smooth: true,
-// });
-
-
-// part3
-
 const nav = document.querySelector("nav");
 const header = document.querySelector(".header3");
 const heroImg = document.querySelector(".hero-img");
@@ -53,7 +39,7 @@ const setCanvasSize = () => {
 };
 setCanvasSize();
 
-const frameCount = 412; //416. 412
+const frameCount = 412; //416.
 const currentFrame = (index) =>
   `assets/frames/frame_${(index + 1).toString().padStart(4, "0")}.jpg`;
 
@@ -106,8 +92,6 @@ if (img && img.complete && img.naturalWidth > 0) {
 }
 };   
 const setupScrollTrigger = () => {
-  // ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-
   ScrollTrigger.create({
     trigger: ".hero3",
     start: "top top",
@@ -122,8 +106,6 @@ const setupScrollTrigger = () => {
       const targetFrame = Math.round(animationProgress * (frameCount - 1));
       videoFrames.frame = targetFrame;
       render();
-
-      // Animate nav
       if (progress <= 0.1) {
         const navProgress = progress / 0.1;
         const opacity = 1 - navProgress;
@@ -132,7 +114,6 @@ const setupScrollTrigger = () => {
         gsap.set(nav, { opacity: 0 });
       }
 
-      // Animate header
       if (progress <= 0.25) {
         const zProgress = progress / 0.25;
         const translateZ = zProgress * -500;
@@ -150,8 +131,6 @@ const setupScrollTrigger = () => {
       } else {
         gsap.set(header, { opacity: 0 });
       }
-
-      // Animate heroImg
       if (progress < 0.6) {
         gsap.set(heroImg, {
           transform: "translateZ(1000px)",
@@ -337,7 +316,7 @@ onUpdate: ({ progress }) => {
 
  
 
-// part1
+
 const container = document.querySelector('.trail-container');
 
 const config = {
@@ -353,7 +332,6 @@ const config = {
     outEasing:"cubic-bezier(0.87, 0, 0.13, 1)",
     // generateOnIdle: false,
 };
-// ,  ==> .map
 const images = Array.from(
     {length:config.imageCount},
     (_, index)=>
@@ -510,27 +488,22 @@ const removeOldImages = () => {
                 }
             }, {passive:true});
 
-            const animate2 = () => {  //(time)
+            const animate2 = () => {  
                 createTrailImage();
                 removeOldImages();
                 requestAnimationFrame(animate2);
             };
             animate2();
 
-
-
-// part2
-
-
 lenis.on("scroll", ScrollTrigger.update);
 gsap.ticker.add((time) => { 
     lenis.raf(time*1000);
 });
-gsap.ticker.lagSmoothing(0); //no lag
+gsap.ticker.lagSmoothing(0); 
         
 const bannerContainer = document.querySelector(".banner-img-container");
 const bannerIntroTextElements = gsap.utils.toArray(".banner-intro-text");
-const bannerMaskLayers = gsap.utils.toArray(".img-mask ");  //.mask
+const bannerMaskLayers = gsap.utils.toArray(".img-mask ");
 
 const bannerHeader = document.querySelector(".banner-header h1");
 const splitText = new SplitText(bannerHeader, { type: "words" });
@@ -544,15 +517,8 @@ bannerMaskLayers.forEach((layer, i) => {
 
 gsap.set(bannerContainer, { scale: 0 });
 
-
-
 ScrollTrigger.refresh()
 
-
-
-
-
-//part4
 const header1Split = new SplitText(".header-1 h1", {
     type: "chars",
     charsClass: "char",
@@ -600,8 +566,6 @@ const header1Split = new SplitText(".header-1 h1", {
       ],
     },
   ];
-
- //SCrollTrigger.create()
 
 let model,
   currentRotation = 0,
@@ -655,11 +619,6 @@ function setupModel() {
     -center.y + modelSize.y * 0.085,
     -center.z
   );
-// model.position.set(
-//   -center.x + modelSize.x * 0.5,
-//   -center.y + modelSize.y * 0.1,
-//   -center.z
-// );
   model.rotation.z = isMobile ? 0 : THREE.MathUtils.degToRad(-25);
   model.rotation.y = THREE.MathUtils.degToRad(45); 
   const cameraDistance = isMobile ? 2 : 1.25;
