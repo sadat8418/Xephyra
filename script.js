@@ -8,7 +8,6 @@
 document.addEventListener("DOMContentLoaded",()=>{
 window.addEventListener("load", function() {
   const preloader = document.getElementById("preloader");
-  const content = document.getElementById("content");
   const progress = document.querySelector(".progress");
 
   let width = 0;
@@ -19,7 +18,6 @@ window.addEventListener("load", function() {
         preloader.style.opacity = "0";
         setTimeout(() => {
           preloader.style.display = "none";
-          content.style.display = "block";
         }, 500);
       }, 300);
     } else {
