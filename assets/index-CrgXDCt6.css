@@ -242,6 +242,16 @@ p {
     .menu-tag a {
         font-size: 1.25rem
     }
+    .logo a{
+        color: #8e2626;;
+    }
+    .menu-hamburger-icon{
+            border: 1.5px solid #8e2626;
+
+    }
+    .menu-hamburger-icon span{
+        background-color: #8e2626;
+    }
 }
 
 .intro {
