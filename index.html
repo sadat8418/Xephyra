@@ -76,14 +76,6 @@
       opacity: 1;
     }
 
-    body {
-      background: #111;
-      color: white;
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      text-align: center;
-    }
 </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -112,11 +104,9 @@
 <script>
     window.addEventListener("load", () => {
       const loaderWrapper = document.getElementById("loader-wrapper");
-      const pageContent = document.getElementById("page-content");
       loaderWrapper.classList.add("fade-out");
       setTimeout(() => {
         loaderWrapper.remove();
-        pageContent.classList.add("visible");
       }, 400); 
     });
   </script>

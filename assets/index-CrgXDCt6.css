@@ -285,7 +285,14 @@ section {
 }
 
 .trail-container {
-    background-color: #fcfcfc
+    background-color: #fcfcfc;
+      /* font-family: Arial, Helvetica, sans-serif; */
+      position: relative;
+    width: 100vw;
+    overflow: hidden;
+    text-align: center;
+    font-family: "Akkurat Mono",monospace;
+    
 }
 
 .trail-img {
